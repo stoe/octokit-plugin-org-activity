@@ -1,0 +1,66 @@
+{
+  "name": "@github/octokit-plugin-org-activity",
+  "version": "1.0.0",
+  "description": "Octokit plugin to fetch member activity for a given GitHub organization",
+  "keywords": [
+    "octokit",
+    "plugin",
+    "activity",
+    "ghec"
+  ],
+  "author": {
+    "name": "GitHub Professional Services ",
+    "email": "services@github.com",
+    "url": "https://services.github.com"
+  },
+  "contributors": [
+    {
+      "name": "Stefan Stölzle",
+      "email": "stefan@github.com",
+      "url": "https://github.com/stoe"
+    }
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com/stoe/ghec-report.git"
+  },
+  "bugs": {
+    "url": "https://github.com/stoe/ghec-report/issues"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "engines": {
+    "node": ">=12",
+    "npm": ">=6"
+  },
+  "files": [
+    "index.js",
+    "license",
+    "package.json",
+    "readme.md"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "pretest": "eslint --print-config .eslintrc.json | eslint-config-prettier-check",
+    "test": "eslint **/*.js",
+    "start": "node ./index.js"
+  },
+  "dependencies": {
+    "@octokit/core": "^3.1.2",
+    "moment": "^2.27.0"
+  },
+  "peerDependencies": {
+    "@octokit/plugin-enterprise-cloud": "^4.2.0",
+    "@octokit/plugin-retry": "^3.0.3",
+    "@octokit/plugin-throttling": "^3.3.0"
+  },
+  "devDependencies": {
+    "@github/prettier-config": "^0.0.4",
+    "eslint": "^7.7.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-github": "^4.1.1"
+  },
+  "prettier": "@github/prettier-config"
+}
