@@ -1,6 +1,6 @@
 {
   "name": "@stoe/octokit-plugin-org-activity",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Octokit plugin to fetch member activity for a given GitHub organization",
   "keywords": [
     "octokit",
@@ -16,7 +16,7 @@
   "contributors": [
     {
       "name": "Stefan Stölzle",
-      "email": "stefan@github.com",
+      "email": "stoe@github.com",
       "url": "https://github.com/stoe"
     }
   ],
