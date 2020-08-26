@@ -69,10 +69,6 @@ console.log(data)
 ]
 ```
 
-## Example
-
-See [`example/index.js`](./example/index.js) for a detailed example.
-
 ## License
 
 - [MIT License](./license)
