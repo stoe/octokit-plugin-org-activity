@@ -1,7 +1,7 @@
 const moment = require('moment')
 
 /**
- * @module github/octokit-plugin-org-activity
+ * @module stoe/octokit-plugin-org-activity
  */
 module.exports = octokit => {
   const ACTIVITY_QUERY = `query ($org: String!, $from: DateTime, $to: DateTime, $node_id: ID, $cursor: String) {

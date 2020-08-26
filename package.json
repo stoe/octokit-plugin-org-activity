@@ -1,5 +1,5 @@
 {
-  "name": "@github/octokit-plugin-org-activity",
+  "name": "@stoe/octokit-plugin-org-activity",
   "version": "1.0.0",
   "description": "Octokit plugin to fetch member activity for a given GitHub organization",
   "keywords": [

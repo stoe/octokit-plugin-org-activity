@@ -1,4 +1,4 @@
-# @github/octokit-plugin-org-activity
+# @stoe/octokit-plugin-org-activity
 
 [![test](https://github.com/stoe/ghec-report-node/workflows/test/badge.svg)](https://github.com/stoe/ghec-report-node/actions?query=workflow%3Atest) [![publish](https://github.com/stoe/ghec-report-node/workflows/publish/badge.svg)](https://github.com/stoe/ghec-report-node/actions?query=workflow%3Apublish) [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
@@ -7,7 +7,7 @@
 ## Install
 
 ```sh
-$ npm install @github/octokit-plugin-org-activity
+$ npm install @stoe/octokit-plugin-org-activity
 ```
 
 ## Usage
@@ -16,7 +16,7 @@ $ npm install @github/octokit-plugin-org-activity
 const {Octokit} = require('@octokit/core')
 
 const MyOctokit = Octokit.plugin(
-  require('@github/octokit-plugin-org-activity')
+  require('@stoe/octokit-plugin-org-activity')
 )
 
 const octokit = new MyOctokit({

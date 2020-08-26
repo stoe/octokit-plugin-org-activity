@@ -5,7 +5,7 @@ name: Issue Template
 about: Used for creating issues about the GitHub Super-Linter
 ---
 
-### Issue with @github/octokit-plugin-org-activity
+### Issue with @stoe/octokit-plugin-org-activity
 
 ---
 
