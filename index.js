@@ -101,6 +101,7 @@ module.exports = octokit => {
     } = await octokit.graphql(ACTIVITY_QUERY, {org, node_id, from, to, cursor})
 
     for (const data of membersWithRole.edges) {
+      /**@type Contributions */
       records.push({
         login: data.node.login,
         emails: data.node.organizationVerifiedDomainEmails,
@@ -138,7 +139,8 @@ module.exports = octokit => {
         _from = moment(from, ['YYYY-MM-DD', moment.ISO_8601]).toISOString()
       }
 
-      let _to = null
+      // set to now as default
+      let _to = moment().toISOString()
       if (to) {
         _to = moment(to, ['YYYY-MM-DD', moment.ISO_8601]).toISOString()
       }
