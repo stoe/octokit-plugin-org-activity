@@ -63,34 +63,44 @@ console.log(data)
     login: 'monalisa',
     emails: [],
     role: 'MEMBER',
-    contribution: {
-      periodStart: '2019-08-24T22:00:00Z',
-      periosEnd: '2020-08-25T21:59:59Z',
+    contributions: {
+      periodStart: '2020-07-31T22:00:00Z',
+      periodEnd: '2020-09-29T09:55:47Z',
       isSingleDay: false,
-      hasAnyContributions: false,
-      hasAnyPrivateContributions: false,
-      hasPastContributions: true,
-      commitContributions: 0,
-      issuesOpened: 0,
-      pullRequestsOpened: 0,
-      repositoriesCreated: 0
+      hasAnyContributions: true,
+      hasAnyRestrictedContributions: false,
+      hasActivityInThePast: true,
+      totalCommitContributions: 1,
+      totalRepositoriesWithContributedCommits: 1,
+      totalIssueContributions: 1,
+      totalRepositoriesWithContributedIssues: 1,
+      totalPullRequestContributions: 0,
+      totalRepositoriesWithContributedPullRequests: 0,
+      totalPullRequestReviewContributions: 0,
+      totalRepositoriesWithContributedPullRequestReviews: 0,
+      totalRepositoryContributions: 0
     }
   },
   {
     login: 'stoe',
     emails: [ 'stoe@github.com' ],
     role: 'ADMIN',
-    contribution: {
-      periodStart: '2019-08-24T22:00:00Z',
-      periosEnd: '2020-08-25T21:59:59Z',
+    contributions: {
+      periodStart: '2020-07-31T22:00:00Z',
+      periodEnd: '2020-09-29T09:55:47Z',
       isSingleDay: false,
       hasAnyContributions: true,
-      hasAnyPrivateContributions: false,
-      hasPastContributions: true,
-      commitContributions: 78,
-      issuesOpened: 0,
-      pullRequestsOpened: 1,
-      repositoriesCreated: 0
+      hasAnyRestrictedContributions: false,
+      hasActivityInThePast: true,
+      totalCommitContributions: 4,
+      totalRepositoriesWithContributedCommits: 2,
+      totalIssueContributions: 2,
+      totalRepositoriesWithContributedIssues: 1,
+      totalPullRequestContributions: 1,
+      totalRepositoriesWithContributedPullRequests: 1,
+      totalPullRequestReviewContributions: 0,
+      totalRepositoriesWithContributedPullRequestReviews: 0,
+      totalRepositoryContributions: 0
     }
   }
 ]
