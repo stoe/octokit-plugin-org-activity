@@ -12,15 +12,42 @@ $ npm install @stoe/octokit-plugin-org-activity
 
 ## Usage
 
+**Personal Access Token authentication**:
+
 ```js
 const {Octokit} = require('@octokit/core')
-
 const MyOctokit = Octokit.plugin(
   require('@stoe/octokit-plugin-org-activity')
 )
 
 const octokit = new MyOctokit({
   auth: 'GITHUB_TOKEN',
+})
+
+const data = await octokit.listMemberActivityByOrganization({org: 'my-org'})
+
+console.log(data)
+```
+
+**GitHub App installation authentication**:
+
+```js
+const {Octokit} = require('@octokit/core')
+const MyOctokit = Octokit.plugin(
+  require('@stoe/octokit-plugin-org-activity')
+)
+const {createAppAuth} = require('@octokit/auth-app')
+
+const auth = createAppAuth({
+  id: APP_ID,
+  privateKey: Buffer.from(PRIVATE_KEY_BASE64.trim(), 'base64').toString('ascii'),
+  installationId: INSTALLATION_ID
+})
+
+const {token} = await auth({type: 'installation'})
+
+const octokit = new MyOctokit({
+  auth: token
 })
 
 const data = await octokit.listMemberActivityByOrganization({org: 'my-org'})
