@@ -54,7 +54,7 @@
   "peerDependencies": {
     "@octokit/plugin-enterprise-cloud": "^5.0.0",
     "@octokit/plugin-retry": "^3.0.3",
-    "@octokit/plugin-throttling": "^3.3.0"
+    "@octokit/plugin-throttling": "^3.3.1"
   },
   "devDependencies": {
     "@github/prettier-config": "^0.0.4",
