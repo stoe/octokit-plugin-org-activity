@@ -150,6 +150,8 @@ module.exports = octokit => {
       _to = _to.toISOString()
       _from = _from.toISOString()
 
+      octokit.log.debug(`getting contributions for ${org} between ${_from} and ${_to}`)
+
       const {value} = await getActivity({org, node_id, from: _from, to: _to}).next()
 
       return value
