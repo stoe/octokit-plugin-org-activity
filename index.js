@@ -4,7 +4,7 @@ const dayjs = require('dayjs')
  * @module stoe/octokit-plugin-org-activity
  */
 module.exports = octokit => {
-  const ACTIVITY_QUERY = `query ($org: String!, $from: DateTime, $to: DateTime, $node_id: ID, $cursor: String) {
+  const ACTIVITY_QUERY = `query ($org: String!, $node_id: ID, $from: DateTime, $to: DateTime, $cursor: String) {
   organization(login: $org) {
     id
     membersWithRole(first: 10, after: $cursor) {
@@ -15,15 +15,20 @@ module.exports = octokit => {
           organizationVerifiedDomainEmails(login: $org)
           contributionsCollection(from: $from, to: $to, organizationID: $node_id) {
             periodStart: startedAt
-            periosEnd: endedAt
+            periodEnd: endedAt
             isSingleDay
             hasAnyContributions
-            hasAnyPrivateContributions: hasAnyRestrictedContributions
-            hasPastContributions: hasActivityInThePast
-            commitContributions: totalCommitContributions
-            issuesOpened: totalIssueContributions
-            pullRequestsOpened: totalPullRequestContributions
-            repositoriesCreated: totalRepositoryContributions
+            hasAnyRestrictedContributions
+            hasActivityInThePast
+            totalCommitContributions
+            totalRepositoriesWithContributedCommits
+            totalIssueContributions
+            totalRepositoriesWithContributedIssues
+            totalPullRequestContributions
+            totalRepositoriesWithContributedPullRequests
+            totalPullRequestReviewContributions
+            totalRepositoriesWithContributedPullRequestReviews
+            totalRepositoryContributions
           }
         }
         role
@@ -51,15 +56,20 @@ module.exports = octokit => {
    * @readonly
    *
    * @property {string} periodStart - The beginning date and time of this collection.
-   * @property {string} periosEnd - The ending date and time of this collection.
+   * @property {string} periodEnd - The ending date and time of this collection.
    * @property {boolean} isSingleDay - Whether or not the collection's time span is all within the same day.
    * @property {boolean} hasAnyContributions - Determine if there are any contributions in this collection.
-   * @property {boolean} hasAnyPrivateContributions - Determine if the user made any contributions in this time frame whose details are not visible because they were made in a private repository. Can only be true if the user enabled private contribution counts.
-   * @property {boolean} hasPastContributions - Does the user have any more activity in the timeline that occurred prior to the collection's time range?
-   * @property {number} commitContributions - How many commits were made by the user in this time span.
-   * @property {number} issuesOpened - How many issues the user opened.
-   * @property {number} pullRequestsOpened - How many pull requests the user opened.
-   * @property {number} repositoriesCreated - How many repositories the user created.
+   * @property {boolean} hasAnyRestrictedContributions - Determine if the user made any contributions in this time frame whose details are not visible because they were made in a private repository. Can only be true if the user enabled private contribution counts.
+   * @property {boolean} hasActivityInThePast - Does the user have any more activity in the timeline that occurred prior to the collection's time range?
+   * @property {number} totalCommitContributions - How many commits were made by the user in this time span.
+   * @property {number} totalRepositoriesWithContributedCommits - How many different repositories the user committed to.
+   * @property {number} totalIssueContributions - How many issues the user opened.
+   * @property {number} totalRepositoriesWithContributedIssues - How many different repositories the user opened issues in.
+   * @property {number} totalPullRequestContributions - How many pull requests the user opened.
+   * @property {number} totalRepositoriesWithContributedPullRequests - How many different repositories the user opened pull requests in.
+   * @property {number} totalPullRequestReviewContributions -How many pull request reviews the user left.
+   * @property {number} totalRepositoriesWithContributedPullRequestReviews - How many different repositories the user left pull request reviews in.
+   * @property {number} totalRepositoryContributions - How many repositories the user created.
    */
 
   /**
