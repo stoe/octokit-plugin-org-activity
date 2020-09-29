@@ -1,4 +1,4 @@
-const moment = require('moment')
+const dayjs = require('dayjs')
 
 /**
  * @module stoe/octokit-plugin-org-activity
@@ -134,16 +134,21 @@ module.exports = octokit => {
         data: {node_id}
       } = await octokit.request(`GET /orgs/${org}`)
 
-      let _from = null
-      if (from) {
-        _from = moment(from, ['YYYY-MM-DD', moment.ISO_8601]).toISOString()
+      // set to now as default
+      let _to = dayjs()
+      if (to) {
+        _to = dayjs(to, ['YYYY-MM-DD', dayjs.ISO_8601])
       }
 
-      // set to now as default
-      let _to = moment().toISOString()
-      if (to) {
-        _to = moment(to, ['YYYY-MM-DD', moment.ISO_8601]).toISOString()
+      let _from
+      if (from) {
+        _from = dayjs(from, ['YYYY-MM-DD', dayjs.ISO_8601])
+      } else {
+        _from = _to.subtract(1, 'year')
       }
+
+      _to = _to.toISOString()
+      _from = _from.toISOString()
 
       const {value} = await getActivity({org, node_id, from: _from, to: _to}).next()
 
