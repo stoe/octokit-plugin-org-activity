@@ -110,7 +110,7 @@ module.exports = octokit => {
       organization: {membersWithRole}
     } = await octokit.graphql(ACTIVITY_QUERY, {org, node_id, from, to, cursor})
 
-    for (const data of membersWithRole.edges) {
+    membersWithRole.edges.map(data => {
       /**@type Contributions */
       records.push({
         login: data.node.login,
@@ -118,7 +118,7 @@ module.exports = octokit => {
         role: data.role,
         contributions: data.node.contributionsCollection
       })
-    }
+    })
 
     if (membersWithRole.pageInfo.hasNextPage) {
       await getActivity({org, node_id, from, to, cursor: membersWithRole.pageInfo.endCursor}, records).next()
