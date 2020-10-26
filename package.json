@@ -1,6 +1,6 @@
 {
   "name": "@stoe/octokit-plugin-org-activity",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Octokit plugin to fetch member activity for a given GitHub organization",
   "keywords": [
     "octokit",
@@ -48,18 +48,18 @@
     "start": "node ./index.js"
   },
   "dependencies": {
-    "@octokit/core": "^3.1.2",
-    "dayjs": "^1.9.3"
+    "@octokit/core": "^3.1.4",
+    "dayjs": "^1.9.4"
   },
   "peerDependencies": {
     "@octokit/plugin-enterprise-cloud": "^5.0.0",
     "@octokit/plugin-retry": "^3.0.3",
-    "@octokit/plugin-throttling": "^3.3.1"
+    "@octokit/plugin-throttling": "^3.3.2"
   },
   "devDependencies": {
     "@github/prettier-config": "^0.0.4",
-    "eslint": "^7.11.0",
-    "eslint-config-prettier": "^6.13.0",
+    "eslint": "^7.12.0",
+    "eslint-config-prettier": "^6.14.0",
     "eslint-plugin-github": "^4.1.1"
   },
   "prettier": "@github/prettier-config"
