@@ -43,7 +43,7 @@
   ],
   "main": "index.js",
   "scripts": {
-    "pretest": "eslint --print-config .eslintrc.json | eslint-config-prettier-check",
+    "pretest": "node node_modules/.bin/eslint-config-prettier .eslintrc.json",
     "test": "eslint **/*.js",
     "start": "node ./index.js"
   },
