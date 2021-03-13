@@ -48,7 +48,7 @@
     "start": "node ./index.js"
   },
   "dependencies": {
-    "@octokit/core": "^3.2.5",
+    "@octokit/core": "^3.3.0",
     "dayjs": "^1.10.4"
   },
   "peerDependencies": {
