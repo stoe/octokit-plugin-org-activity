@@ -21,13 +21,7 @@
     }
   ],
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "ssh://git@github.com/stoe/octokit-plugin-org-activity.git"
-  },
-  "bugs": {
-    "url": "https://github.com/stoe/octokit-plugin-org-activity/issues"
-  },
+  "repository": "github:stoe/octokit-plugin-org-activity",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
