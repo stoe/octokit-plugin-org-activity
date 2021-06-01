@@ -43,7 +43,7 @@
   },
   "dependencies": {
     "@octokit/core": "^3.4.0",
-    "dayjs": "^1.10.4"
+    "dayjs": "^1.10.5"
   },
   "peerDependencies": {
     "@octokit/plugin-enterprise-cloud": "^5.0.4",
