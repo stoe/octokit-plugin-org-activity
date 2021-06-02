@@ -1,6 +1,6 @@
 # @stoe/octokit-plugin-org-activity
 
-[![test](https://github.com/stoe/octokit-plugin-org-activity/workflows/test/badge.svg)](https://github.com/stoe/octokit-plugin-org-activity/actions?query=workflow%3Atest) [![publish](https://github.com/stoe/octokit-plugin-org-activity/workflows/publish/badge.svg)](https://github.com/stoe/octokit-plugin-org-activity/actions?query=workflow%3Apublish) [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+[![test](https://github.com/stoe/octokit-plugin-org-activity/actions/workflows/test.yml/badge.svg)](https://github.com/stoe/octokit-plugin-org-activity/actions/workflows/test.yml) [![codeql](https://github.com/stoe/octokit-plugin-org-activity/actions/workflows/codeql.yml/badge.svg)](https://github.com/stoe/octokit-plugin-org-activity/actions/workflows/codeql.yml) [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
 > Octokit plugin to fetch member activity for a given GitHub organization
 
