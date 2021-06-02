@@ -23,8 +23,8 @@
   "license": "MIT",
   "repository": "github:stoe/octokit-plugin-org-activity",
   "engines": {
-    "node": ">=12",
-    "npm": ">=6"
+    "node": ">=14",
+    "npm": ">=7"
   },
   "files": [
     "index.js",
