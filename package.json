@@ -22,9 +22,6 @@
   ],
   "license": "MIT",
   "repository": "github:stoe/octokit-plugin-org-activity",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
   "engines": {
     "node": ">=12",
     "npm": ">=6"
@@ -37,9 +34,8 @@
   ],
   "main": "index.js",
   "scripts": {
-    "pretest": "node node_modules/.bin/eslint-config-prettier .eslintrc.json",
-    "test": "eslint **/*.js",
-    "start": "node ./index.js"
+    "pretest": "npx eslint-config-prettier .eslintrc.json",
+    "test": "eslint **/*.js"
   },
   "dependencies": {
     "@octokit/core": "^3.4.0",
@@ -48,7 +44,7 @@
   "peerDependencies": {
     "@octokit/plugin-enterprise-cloud": "^5.0.4",
     "@octokit/plugin-retry": "^3.0.7",
-    "@octokit/plugin-throttling": "^3.4.1"
+    "@octokit/plugin-throttling": "^3.4.2"
   },
   "devDependencies": {
     "@github/prettier-config": "^0.0.4",
