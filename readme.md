@@ -1,6 +1,6 @@
 # @stoe/octokit-plugin-org-activity
 
-[![test](https://github.com/stoe/octokit-plugin-org-activity/actions/workflows/test.yml/badge.svg)](https://github.com/stoe/octokit-plugin-org-activity/actions/workflows/test.yml) [![codeql](https://github.com/stoe/octokit-plugin-org-activity/actions/workflows/codeql.yml/badge.svg)](https://github.com/stoe/octokit-plugin-org-activity/actions/workflows/codeql.yml) [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+[![test](https://github.com/stoe/octokit-plugin-org-activity/actions/workflows/test.yml/badge.svg)](https://github.com/stoe/octokit-plugin-org-activity/actions/workflows/test.yml) [![codeql](https://github.com/stoe/octokit-plugin-org-activity/actions/workflows/codeql.yml/badge.svg)](https://github.com/stoe/octokit-plugin-org-activity/actions/workflows/codeql.yml) [![publish](https://github.com/stoe/octokit-plugin-org-activity/actions/workflows/publish.yml/badge.svg)](https://github.com/stoe/octokit-plugin-org-activity/actions/workflows/publish.yml) [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
 > Octokit plugin to fetch member activity for a given GitHub organization
 
