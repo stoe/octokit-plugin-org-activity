@@ -1,9 +1,9 @@
-const dayjs = require('dayjs')
+import dayjs from 'dayjs'
 
 /**
  * @module stoe/octokit-plugin-org-activity
  */
-module.exports = octokit => {
+export default function plugin(octokit) {
   const ACTIVITY_QUERY = `query ($org: String!, $node_id: ID, $from: DateTime, $to: DateTime, $cursor: String) {
   organization(login: $org) {
     id

@@ -1,6 +1,7 @@
 {
   "name": "@stoe/octokit-plugin-org-activity",
   "version": "1.2.1",
+  "type": "module",
   "description": "Octokit plugin to fetch member activity for a given GitHub organization",
   "keywords": [
     "octokit",
@@ -32,7 +33,7 @@
     "package.json",
     "readme.md"
   ],
-  "main": "index.js",
+  "exports": "./index.js",
   "scripts": {
     "pretest": "npx eslint-config-prettier .eslintrc.json",
     "test": "eslint **/*.js"
