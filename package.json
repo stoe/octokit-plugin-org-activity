@@ -1,6 +1,7 @@
 {
   "name": "@stoe/octokit-plugin-org-activity",
   "version": "1.2.1",
+  "type": "module",
   "description": "Octokit plugin to fetch member activity for a given GitHub organization",
   "keywords": [
     "octokit",
@@ -23,7 +24,7 @@
   "license": "MIT",
   "repository": "github:stoe/octokit-plugin-org-activity",
   "engines": {
-    "node": ">=14",
+    "node": ">=16",
     "npm": ">=7"
   },
   "files": [
@@ -32,25 +33,28 @@
     "package.json",
     "readme.md"
   ],
-  "main": "index.js",
+  "exports": "./index.js",
   "scripts": {
     "pretest": "npx eslint-config-prettier .eslintrc.json",
     "test": "eslint **/*.js"
   },
   "dependencies": {
+    "@octokit/auth-app": "^3.6.0",
     "@octokit/core": "^3.5.1",
-    "dayjs": "^1.10.5"
+    "console-log-level": "^1.4.1",
+    "dayjs": "^1.10.6",
+    "dotenv": "^10.0.0"
   },
   "peerDependencies": {
     "@octokit/plugin-enterprise-cloud": "^6.0.0",
     "@octokit/plugin-retry": "^3.0.9",
-    "@octokit/plugin-throttling": "^3.5.1"
+    "@octokit/plugin-throttling": "^3.5.2"
   },
   "devDependencies": {
     "@github/prettier-config": "^0.0.4",
-    "eslint": "^7.30.0",
+    "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-github": "^4.1.3"
+    "eslint-plugin-github": "^4.2.0"
   },
   "prettier": "@github/prettier-config"
 }
