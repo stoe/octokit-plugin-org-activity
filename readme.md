@@ -16,12 +16,12 @@ $ npm install @stoe/octokit-plugin-org-activity
 
 ```js
 import {Octokit} from '@octokit/core'
-import plugin from '@stoe/octokit-plugin-org-activity'
+import org_activity_plugin from '@stoe/octokit-plugin-org-activity'
 
-const MyOctokit = Octokit.plugin(plugin)
+const MyOctokit = Octokit.plugin(org_activity_plugin)
 
 const octokit = new MyOctokit({
-  auth: 'GITHUB_TOKEN',
+  auth: 'GITHUB_TOKEN'
 })
 
 const data = await octokit.listMemberActivityByOrganization({org: 'my-org'})
@@ -34,9 +34,9 @@ console.log(data)
 ```js
 import {Octokit} from '@octokit/core'
 import {createAppAuth} from '@octokit/auth-app'
-import plugin from '@stoe/octokit-plugin-org-activity'
+import org_activity_plugin from '@stoe/octokit-plugin-org-activity'
 
-const MyOctokit = Octokit.plugin(plugin)
+const MyOctokit = Octokit.plugin(org_activity_plugin)
 
 const auth = createAppAuth({
   id: APP_ID,
