@@ -43,7 +43,7 @@
     "@octokit/core": "^3.5.1",
     "console-log-level": "^1.4.1",
     "dayjs": "^1.10.7",
-    "dotenv": "^10.0.0"
+    "dotenv": "^14.2.0"
   },
   "peerDependencies": {
     "@octokit/plugin-enterprise-cloud": "^6.0.0",
