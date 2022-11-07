@@ -39,11 +39,11 @@
     "test": "eslint **/*.js"
   },
   "dependencies": {
-    "@octokit/auth-app": "^4.0.4",
-    "@octokit/core": "^3.6.0",
+    "@octokit/auth-app": "^4.0.7",
+    "@octokit/core": "^4.1.0",
     "console-log-level": "^1.4.1",
-    "dayjs": "^1.11.0",
-    "dotenv": "^16.0.0"
+    "dayjs": "^1.11.6",
+    "dotenv": "^16.0.3"
   },
   "peerDependencies": {
     "@octokit/plugin-enterprise-cloud": "^6.0.0",
@@ -52,9 +52,9 @@
   },
   "devDependencies": {
     "@github/prettier-config": "^0.0.4",
-    "eslint": "^7.32.0, <9",
+    "eslint": "^8.27.0",
     "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-github": "^4.3.6"
+    "eslint-plugin-github": "^4.4.1"
   },
   "prettier": "@github/prettier-config"
 }
