@@ -1,6 +1,6 @@
 {
   "name": "@stoe/octokit-plugin-org-activity",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "type": "module",
   "description": "Octokit plugin to fetch member activity for a given GitHub organization",
   "keywords": [
