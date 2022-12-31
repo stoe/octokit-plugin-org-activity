@@ -107,7 +107,7 @@ export default function plugin(octokit) {
    */
   async function* getActivity({org, node_id, from = null, to = null, cursor = null}, records = []) {
     const {
-      organization: {membersWithRole}
+      organization: {membersWithRole},
     } = await octokit.graphql(ACTIVITY_QUERY, {org, node_id, from, to, cursor})
 
     membersWithRole.edges.map(data => {
@@ -116,7 +116,7 @@ export default function plugin(octokit) {
         login: data.node.login,
         emails: data.node.organizationVerifiedDomainEmails,
         role: data.role,
-        contributions: data.node.contributionsCollection
+        contributions: data.node.contributionsCollection,
       })
     })
 
@@ -141,7 +141,7 @@ export default function plugin(octokit) {
     listMemberActivityByOrganization: async ({org, from = null, to = null}) => {
       // get the orgs node_id needed for the GraphQL query
       const {
-        data: {node_id}
+        data: {node_id},
       } = await octokit.request(`GET /orgs/${org}`)
 
       // set to now as default
@@ -165,6 +165,6 @@ export default function plugin(octokit) {
       const {value} = await getActivity({org, node_id, from: _from, to: _to}).next()
 
       return value
-    }
+    },
   }
 }
