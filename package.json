@@ -39,7 +39,7 @@
     "test": "eslint **/*.js"
   },
   "dependencies": {
-    "@octokit/auth-app": "^4.0.7",
+    "@octokit/auth-app": "^6.0.3",
     "@octokit/core": "^4.1.0",
     "console-log-level": "^1.4.1",
     "dayjs": "^1.11.7",
